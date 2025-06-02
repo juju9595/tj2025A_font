@@ -1,0 +1,56 @@
+
+*{ margin: 0px; padding: 0px;}
+*{ box-sizing: border-box;}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+    li{list-style-type: none;}
+
+ #header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1080px;
+    margin: 15px auto;
+ }
+.right-head{
+    display: flex; justify-content: flex-end;
+}
+.right-head > li{
+    font-size: 10px;
+    font-weight: bold;
+    margin: 20px 0px 30px 100px;
+    color: lightgray;
+}
+.왼쪽로고{
+    display: flex;
+    width: 200px;
+}
+.header-logo{
+    display: flex;
+}
+.header-logo > h3{
+    margin-right: 10px;
+}
+.header-logo > .color{
+    color: blue;
+}
+#main-img > img{
+    width: 85%;
+    margin: 0px 200px auto;
+}
+#main{ 
+    display: flex; 
+    justify-content: space-between;
+    width: 1080px;
+    margin: 0px auto;
+}
+.content{margin: 40px 10px ;}
+.content2{
+    display: flex;
+}
+
+
