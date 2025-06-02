@@ -1,0 +1,36 @@
+  
+  
+  
+  
+    무료 폰트 : https://noonnu.cc/font_page/pick#google_vignette
+    무료 영문 폰트 : https://fonts.google.com/
+@font-face {
+    font-family: 'Ownglyph_ParkDaHyun';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2411-3@1.0/Ownglyph_ParkDaHyun.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+.title{
+    font-family: "맑은 고딕" , "궁서";
+    font-size: 40;
+    font-style: italic;
+    font-weight: bold;
+}
+.content{
+    font-family: 'Ownglyph_ParkDaHyun'; /* 글꼴 */
+    color: purple;                      /* 글꼴 색상*/
+    word-spacing : 10px;                 /* 단어 간격 : 어간 */
+    letter-spacing : 20px;              /* 글자 간격 : 자간 */
+    line-height: 150%;                  /* 줄 가격 ,*/ 
+}
+.writer{
+    text-align: center;       /* 텍스트 가로 정렬 :
+    /* 텍스트 선긋기 :underline(밑줄), overline(윗줄) , line-through(취소선) * /
+    text-decoration : underline overline lien-through ;
+    /* 텍스트 그림자 : x축 y축 흐림정도 색상 */
+    text-shadow: 10px 10px 5px red;
+    /* 색상 : 3가지 ( 1. 색상명 2.RGB 3. 헥스코드(16진수) ) */
+    color: green; /* 1.색상명 */
+    color: rgb( 140, 255, 100 ); /* 2.RGB */
+    color: #000000; /* 3.헥스코드*/
+}

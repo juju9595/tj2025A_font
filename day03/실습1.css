@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'Cafe24Ssurround';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* h1{} vs .title{} */
+
+.title{
+    font-family: "궁서"; /* 글꼴 */
+    font-size: 50px;     /* 글짜 크기 */
+    font-style: italic; /*글꼴 기울기 */
+}
+.content{
+    font-family: 'Cafe24Ssurround'; /* 글꼴 */
+    color: blue;                /* 글꼴 색상 */
+    word-spacing: 10px;     /* 어간 */
+    line-height: 150%;  /* 줄간격 */
+    letter-spacing: 10px;   /* 자간 */
+    font-weight: bold;  /*글꼴 진하게 */
+}
+.writer{
+    text-align: center; /*가로 가운데 정렬 */
+    text-decoration: underline overline line-through; /*텍스트 선긋기 */
+    color: red; /*글꼴 색상 */
+    text-shadow: 1px 1px 5px gray;
+}

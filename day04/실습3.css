@@ -1,0 +1,39 @@
+
+/* 확인용: 완성 후 삭제*/
+*{
+   
+    padding: 3px;
+}
+/* 1. 로그인 구역 */
+.container{
+    width: 320px; /* 현재 선택자 구역의 가로 크기 */
+    margin: 50px auto; /* 현재 선택 구역의 가로 가운데 */
+    text-align: center; /* 내용물 가운데 */
+    box-shadow: 1px 2px 5px pink;
+    border-radius: 10px;
+    padding: 5px 0px 25px 0px; /* 안쪽여백 */ 
+}
+.input-id , .input-pwd{
+    width: 150px ;
+    height: 30px;
+    padding: 0px 15px;
+    border: 1px solid gray;
+    border-radius : 10px;
+    margin : 8px 0px;
+}
+
+/* 3. 로그인 버튼 */
+.input-btn{
+    background-color: blue;
+    color: white;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+}
+/* 4. 링크 a */
+a{
+    text-decoration: none; /* 밑줄 제거*/
+}
+.foot{ font-weight: 500; font-size: 13px;}
+

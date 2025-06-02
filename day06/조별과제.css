@@ -1,0 +1,196 @@
+/* CSS reset */
+*{ /* font-family: 'Pretendard-Regular';*/
+    border: solid 0px red;
+    margin: 0px; padding: 0px; box-sizing: border-box;
+}
+li{ list-style: none;}
+a{ text-decoration: none;}
+video{ width: 100%; }
+
+/* 웹폰트 */
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+body{
+    /* background-color: #6db9ef; */
+    background-color: rgba(0,0,0,.93); 
+    line-height: 180%;
+    letter-spacing: -0.1px;
+    color: rgba(0,0,0,.85); 
+}
+/* 전체 랩(컨테이너) */
+#wrap{ 
+    width: 1000px;
+    margin:0 auto;
+}
+
+/* ######## 해더(Team.돈까스_최동진) 시작 ######### */
+#header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px 34px 18px;
+    margin: 0 auto;
+}
+
+.header-team{
+    display: flex;
+    align-items: center;
+}
+
+.header-team a{ 
+    color: rgba(255,255,255,.95);
+    font:600 28px "Arial";
+    display: flex;
+    align-items: center;
+}
+
+.header-team img{
+    width: 32px;
+    margin-right: 10px;
+}
+
+.header-nav{
+    display: flex;
+    justify-content: flex-end;
+    border: 0px solid black;
+    color: white;
+    /* margin: 10px auto; */
+}
+
+.header-navbutton{
+    display: flex;
+    text-align: center;
+}
+
+.header-navbutton > li{
+    padding-left: 20px;
+}    
+
+.header-navbutton > li > a{
+    text-decoration: none;
+    color: rgba(255,255,255,.9);
+    background-color: #3b70e8;
+    border: 1px solid rgba(0,0,0,.7);
+    padding: 7px 18px;
+    border-radius: 1px 10px 2px 10px;
+} 
+.header-navbutton > li > a.active{
+    background-color: #03145e;
+    border-color: #2a76c2;
+    border: 1px solid #308eec;
+}
+
+/* ######## 해더(Team.돈까스_최동진) 끝 ######### */
+
+/*  공통 본문 영역 */
+.content{
+    min-height: 560px;
+    overflow:hidden;
+    border:solid 1px #2a76c2; 
+    background-color: #fff;
+    border-radius:1px 60px 1px 60px;
+    box-shadow: 7px 7px #2a76c2; 
+    margin:0 auto 20px;
+    font:normal 16px "malgun gothic","맑은고딕"; 
+}
+
+/* 서브페이지 영역 */
+.sub_page_wrap{ }
+
+/* 서브(Sub) 상단 배너/타이틀 */
+.sub_banner{ 
+    position: relative;
+    height: 150px;
+    background-color: #02268e;
+    overflow:hidden;
+}
+.sub_banner video{ margin-top: -160px; }
+
+.sub_banner .sub_title{ 
+    position: absolute; top: 33px; left: 58px;
+    
+}
+.sub_title h2{ 
+    font: 400 35px "Pretendard";
+    margin: 0;
+    color:rgba(255,255,255,.9);
+    
+}
+.sub_title p{ 
+    font: normal 18px "Arial";
+    margin: 0;
+    color: #399fff;
+    letter-spacing: -1px;
+}
+
+/* 서브(Sub) 본문 내용 */
+.sub_content_wrap{ 
+    padding: 60px;
+}
+
+/* ######## 푸터(Team.돈까스_정은주) 시작 ######### */
+/* 푸터 */
+#bottom{
+    display: flex;
+    justify-content: space-between;
+    margin: 4px 2px 20px 40px;
+}
+.name{
+    color: #338ef7;
+    font-size: 14px;
+    letter-spacing:0px;
+    padding:5px 0 0 0;
+}
+.name span{ color: rgba(255,255,255,.7); }
+a{
+    color: rgba(255,255,255,.8);
+}
+.화살표 img{
+    width: 30px;
+}
+/* ######## 푸터 (Team.돈까스_정은주) 끝 ######### */
+
+.sub_content_wrap > .content1 > .title{
+    padding: 30px;
+    font-size: 30px;
+    color: #21469c;
+}
+
+.content1 li{
+    border: solid 2px #6db9ef;
+    margin: 20px 0px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+.이미지 {
+    margin-bottom: 30px;
+}
+
+.sub_content_wrap > .content2 > .title{
+    padding: 30px;
+    font-size: 20px;
+    color: #21469c;
+}
+.내용2{
+    display: flex;
+    justify-content: space-between; 
+}
+.내용설명{
+    border: solid 2px #6db9ef;
+    margin: 20px;
+    text-align: center;
+}
+.내용설명 > h3 {
+    background-color: #6db9ef;
+    padding: 10px;
+}
+.내용설명 > p {
+    padding: 10px 10px;
+    flex-wrap: wrap;
+    width: 250px;
+}

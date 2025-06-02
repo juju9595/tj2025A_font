@@ -1,0 +1,85 @@
+[ 언어 ] : 정해진 규칙/기호 집합
+[ 언어 와 언어 사이 ] :  번역이 필요하다. 컴파일/인터프리터/랜더링
+[ HTML 언어 와 기계어 사이 ] : 브라우저( 크롬,엣지,사파리 등등)
+[ HTML 언어 ]
+   1. H(Hyper:이동) T(Text:텍스트) M(Markup:마크업) L(Language:언어) 
+      - 이동이 가능한 문자들을 제공하는 마크업언어
+   2. 마크업 : 구조화된 표식, 
+   3. 언어 : 규칙/기호 집합
+       마크업 언어란 : 텍스트 앞뒤에 마크/덮쳐서 하는 언어
+        * 각 마크업에는 미리 정해진 기능들이 포함
+       예) <h1>안녕</h1>
+   4. 주석이란 : 메모지(번역하지 않는 구역)
+      <!-- 내용물 -->
+[ 마크업 ]
+     - HTML 언어를 만든 회사에서 미리 정의한 규칙 = 문법
+     방법1. <마크업명> 내용물 </마크업명>
+         - <h1> </h1> 
+     방법2. <마크업명/>
+         - <img />
+[ 마크업 종류 ]
+
+
+
+
+
+
+
+    7. <h1>
+    8. <p> </p> : 문단(Paragrath) 마크업, 구역의미 
+    9. <br / >
+
+
+
+
+
+
+    15. <img /> : 이미지 마크업
+    16. <audio> </audi> : 오이오 마크업
+    17. <viveo> </viveo> : 비디오 마크업
+        15-16 공통 속성, src="파일경로"
+        16-17 공통 속성,
+            controls="controls" : 컨트롤러 제공
+            autoplay="autoplay" : 자동실행, 정책상 차단
+            muted="muted"       : 음소거, auotoplay + muted : 비디오 자동실행 가능
+
+
+
+    18. <input> : 입력 상자
+         - [ 주요 속성명 ]
+         (1) type       : 입력 방법
+            type = "text"           : 문자 입력 , type 생략시 기본값 
+            type = "password"       : 가려진 문자 입력 
+            type = "file"           : 첨부파일 입력 *multiple속성 : 다중선택 
+            type = "radio"          : 단일선택의 선택상자 * name 속성값이 동일
+            type = "checkbox"       : 복수선택의 선택상자 
+            type = "number"         : 숫자 입력 
+            type = "date"           : 날짜 선택
+            type = "datetime-local" : 날짜/시간 선택 
+            type = "time"           : 시간 선택 
+            type = "month"          : 월 선택 
+            type = "week"           : 주 선택 
+            type = "range"          : 범위 스크롤 
+            type = "submit"         : 폼 전송
+            type = "reset"          : 폼 초기화
+            type = "button"         : 일반 버튼 vs <button type="button"> </button>
+         (2) name       : 동일한 마크업간의 식별 이름
+         (3) value      : 입력상자에 데이터
+         (4) disable    : 비활성화(사용금지)
+         (5) readyonly  : 수정불가능(수정금지)
+         (6) maxlength  : 최대 글자수 제한
+         (7) autofocus  : 지정한 입력상자의 포커스(마우스커서) 설정
+         (8) placeholder : 입력상자의 가이드텍스트
+
+    20. 표 만들기
+    <table> : 전체 표를 감싼 마크업
+        <tr> : 테이블 행/가로
+            <th> : 테이블 제목(열/세로) 셀/칸
+            <td> : 테이블 데이터(열/세로) 셀/칸
+
+    속성
+        boarder = "1" : 테이블 테두리
+        style="boarder-collapse : collapse;" : 이중 테두리를 하나의 테투리로 변경
+        rowspan = "행병합"
+        colspan = "열병합"
+        

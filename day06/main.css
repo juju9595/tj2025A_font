@@ -1,0 +1,60 @@
+/* 메인페이지 영역 */
+.main_page_wrap{
+    text-align: center;
+    padding: 0;
+    background-color: rgba(0,0,0,1);
+}
+/* 메인 배너 */
+.main_page_wrap .main_banner{
+    height: 560px;
+    background-color: #02268e;
+    overflow:hidden;
+}
+.main_page_wrap h2{ 
+    margin: -440px 0 0 66px;
+    text-align: left;
+    font-size: 54px;
+    color: rgba(255,255,255,.9);
+    text-transform: uppercase;
+    padding:10px 0;
+    letter-spacing: 2px;
+}
+.main_page_wrap h2 span{ 
+    display: block;
+    font-size: 22px;
+    padding-bottom: 5px;
+    font-weight: normal;
+    letter-spacing: -0.8px;
+    color: #40b1f3;
+    text-transform: capitalize;
+}
+/* 메인 하단 퀵메뉴 */
+.quick_menu{
+    position: relative;
+    display: flex;
+    text-transform: capitalize;
+    padding: 5px 0 0 55px;
+    /* justify-content: space-evenly */
+}
+.quick_menu a{ 
+    font:normal 17px "맑은고딕";
+    line-height: 140%;
+    display: block;
+    box-sizing: border-box;
+    width: 140px;
+    height: 140px;
+    padding: 42px 0;
+    margin: 10px;
+    border-radius: 100px;
+    border:solid 1px rgba(255,255,255,.3);
+    color: rgba(255,255,255,.9);
+    background-color: rgba(0,0,0,.5);
+    z-index: 999999;
+    transition: .2s ease;
+}
+.quick_menu a:hover{
+    background-color: rgba(11, 32, 156, 0.9);
+    color: rgba(255,255,255,1);
+    border-color:rgba(255,255,255,.5);
+    border-radius: 20px;
+}

@@ -1,0 +1,59 @@
+*{
+    border: 1px soild red;
+}
+
+@font-face {
+    font-family: 'HakgyoansimDunggeunmisoTTF-B';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-5@1.0/HakgyoansimDunggeunmisoTTF-B.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+
+.base{
+    border: 3px solid #3081d0;
+    width: 1000px;
+    height: 750px;
+    box-shadow: 10px 10px 3px #3081d0;
+    background-color: white;
+    border-radius: 20px;
+    font-family:'HakgyoansimDunggeunmisoTTF-B';
+    margin: 0 auto;
+}
+.title{
+    text-align: center;
+    font-size: 50px;
+}
+.부제목{
+    font-size: 60px;
+    color: #21469c;
+    text-align: center;
+}
+.box1{
+    text-align: center;
+    border: 3px solid #6db9ef;
+    width: 800px;
+    height: 50px;
+    font-size: 20px;
+    color: #2d8bba;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding-top: 25px;
+    margin-bottom: 50px ;
+}
+.font{
+    text-align: center;
+    padding-right: 780px;
+}
+
+#bottom{
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    margin: 0 auto;
+    margin: 10px 0px;
+    font-weight: bold;
+}
+
+
