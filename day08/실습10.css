@@ -1,0 +1,44 @@
+
+*{
+    padding: 0px; margin: 0;
+}
+
+li{ list-style-type: none; }
+a{ color: black; text-decoration: none;}
+
+#header{
+    width: 100%;
+    display: flex; justify-content: space-between;
+    align-items: center;
+}
+
+#topMenu{
+    display: flex; justify-content: space-between;
+}
+#footer{width: 100%;}
+
+.box4{ display: flex;}
+
+
+
+
+/*=====================푸터===================*/
+
+#footer{margin-top: 100px;}
+
+#footerTop{
+    color: gray;
+}
+#footerContent{
+    width: 1400px; margin: 0 auto;
+}
+.ftcontent{
+    display: flex; justify-content: center;
+}
+
+#footerContent ul{
+    display: flex; justify-content: center; 
+    margin-top: 30px;
+
+}
+#footerContent ul > li{margin-right: 10px;}
