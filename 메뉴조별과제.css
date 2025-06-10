@@ -1,12 +1,11 @@
 * {
     padding: 0px; margin: 0px;
     box-sizing: border-box;
-    border: 1px solid red;
+    
 }
 
 li{ list-style-type: none;}
 a{ color: black; text-decoration: none; }
-
 
 #header{
     width: 100%;
@@ -152,11 +151,10 @@ a{ color: black; text-decoration: none; }
     border-radius: 10px;
 }
 
-
 .boxImg{
     width: 70px;
     border-radius: 10px;
-    box-shadow:  3px 3px rgba(0, 0, 0, 0.03);
+    box-shadow:  3px 3px rgba(0, 0, 0, 0.03)
 }
 
 .SubHeader_rightbox{
@@ -264,13 +262,13 @@ a{ color: black; text-decoration: none; }
 
 .copytitle{color: #fff;
     font-weight: 500;
-    font-size: 10px;
+    font-size: 9px;
     line-height: 14px;
     padding: 35px 15px 20px;
 }
 
 .color {
-    color: #fed100;
+    color: yellow;
     font-weight: bold;
 }
 
@@ -310,37 +308,20 @@ a{ color: black; text-decoration: none; }
 }
 
 .ft-info{
-    padding-bottom: 20px;
+    padding-bottom: 30px;
 }
 
-.ft-info1 p{
+
+.ft-info p{
     color: #fff;
-    padding: 3px;
-    font-size: 15.5px;
-    text-align: center;
-}
-
-.location{
     border: 1px solid rgb(255 255 255 / 30%);
     border-radius: 50px;
-    margin: 10px 80px 0px 30px;
-    font-size: 30px;
+    padding: 5px 15px;
+    text-align: center;
     font-weight: bold;
+    font-size: 13.5px;
 }
 
-.ft-info2{
-    display: flex;
-}
-
-.ft-info2 img{
-    width: 20px;
-    margin-bottom: 50px;
-}
-
-.info2_box{
-    color: #996f48;
-    margin: 10px;;
-}
 .footer-tel {
     width: 21%;
 }
