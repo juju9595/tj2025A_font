@@ -21,3 +21,6 @@ console.log( result1 )// ,사용자 확인 클릭시 true 출력, 취소 클리�
 let result2 = prompt( "사용자 전화번호 입력하세요. ")
 console.log( result2 )
 
+
+
+
