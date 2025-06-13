@@ -64,22 +64,22 @@ console.log( season[4])     //undefined , 존재하지 않은 인덱스이므로
     //***** 사람 -> 가방 -> 핸드폰,지갑,책      ** 사람이 가방을 열고 핸드폰을 꺼낸다.
 // 3. 배열 수정
     // (1) 배열 전체 수정
-season = [ "유재석", "강호동" ]
-console.log( season )   // ['유재석', '강호동']
+season1 = [ "유재석", "강호동" ]
+console.log( season1 )   // ['유재석', '강호동']
     // (2) 배열내 특정한 요소 수정 , 변수명[인덱스] = 새로운값
 season[1] = "신동엽"
-console.log( season ) // ['유재석', '신동엽']
+console.log( season1 ) // ['유재석', '신동엽']
 
 // 4. 배열내 요소 추가, 변수명.push(새로운값) , 뒤에서부터 추가 된다.
-season.push( "서장훈" ) //
-console.log( season ) // ['유재석', '신동엽', '서장훈']
+season1.push( "서장훈" ) //
+console.log( season1 ) // ['유재석', '신동엽', '서장훈']
 
 // 5. 배열내 요소 삭제 , 변수명.splice( 인덱스, 개수 )
-season.splice( 0 , 1 )  // 0번 인덱스 부터 1개 삭제
-console.log( season )   //['신동엽', '서장훈']
+season1.splice( 0 , 1 )  // 0번 인덱스 부터 1개 삭제
+console.log( season1 )   //['신동엽', '서장훈']
 
 // 6. 배열내 특성 요소 찾기, 변수명.indexOf( 찾을값 ) , 찾을값이 배열내 존재하면 인덱스변호 없으면 -1 변환
-console.log( season.indexOf( "유재석") )    //-1
-console.log( season.indexOf( "신동엽") )    // 0 , 찾을값이 0번 인덱스에 있다. 
-let result = season.indexOf("서장훈")           
+console.log( season1.indexOf( "유재석") )    //-1
+console.log( season1.indexOf( "신동엽") )    // 0 , 찾을값이 0번 인덱스에 있다. 
+let result = season1.indexOf("서장훈")           
 console.log( result )                       //1

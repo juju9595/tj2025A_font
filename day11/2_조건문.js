@@ -76,8 +76,20 @@ else{ // 8 이상이 아니면 8미만 이므로 가정
 문제 5: 좌석 예약 시스템
 3개 좌석의 예약 상태를 나타내는 배열이 있습니다. ('O': 예약 완료, 'X': 예약 가능)
 let seatList = [ 'O', 'X', 'O' ];
-사용자로부터 예약할 좌석의 인덱스 번호(0, 1, 2)를 입력받아, 해당 좌석이 예약 가능('X')하면 '예약 성공'을, 이미 예약된 좌석('O')이면 '예약 불가'를 출력하는 프로그램을 작성하시오.
+사용자로부터 예약할 좌석의 인덱스 번호(0, 1, 2)를 입력받아, 해당 좌석이 예약 가능('X')하면 
+'예약 성공'을, 이미 예약된 좌석('O')이면 '예약 불가'를 출력하는 프로그램을 작성하시오.
 */
+let seatList = [ 'O', 'X', 'O' ]; //(1) 배열이란? 여러개의 자료들을 하나의 자료로 묵음
+let seat =prompt("좌석번호 선택(0~2): " ) // (2) 인덱스란? 배열에 저장된 자료드르이 순서번호 "0번시작"
+//seat 번호 == index번호
+if( seatList[seat] =='O'){ // 만약에 좌석목록(seatList)에서 (입력받은)한(시트/인덱스)rk 'O' 이면
+    console.log('예약불가');
+// else if(seatList[seat] == )
+}else{ // 그외
+    console.log('예약 성공');
+    seatList[seat] = 'O'; // 해당하는 좌석목록에 상태 변경 / 대입
+}
+
 
 /*
 문제 6: 점수에 따른 상품 지급
@@ -87,6 +99,12 @@ let seatList = [ 'O', 'X', 'O' ];
 500점 이상 700점 미만: 'C급 경품'
 500점 미만: '참가상'
 */
+//조건 : 점수>=900, 점수 >=700 && 점수 < 900, 점수 >= 500 && 점수 <700, 점수 < 500
+let gamePoint = Number(prompt('게임점수 :'))
+if( gamePoint >= 900 ){console.log('A급 경품'); }
+else if(gamePoint >=700 && gamePoint< 900){console.log('B급 경품'); } // && gamePoint< 900 생략가능 : 앞 조건에 이미 900이상
+else if(gamePoint >= gamePoint >= 500 && gamePoint <700){console.log('C급 경품'); }
+else{console.log('참가상'); }
 
 /*
 문제 7: 사용자 역할에 따른 접근 권한 부여
@@ -96,6 +114,13 @@ editor: '콘텐츠 수정 및 생성 기능에 접근할 수 있습니다.'
 viewer: '콘텐츠 조회만 가능합니다.'
 그 외 역할: '정의되지 않은 역할입니다.'
 */
+//조건:role =='admin, role== 'editor, role =='viewer //   다수이다.
+let role = prompt('사용자 역할 :')
+if(role == 'admin'){console.log('모든 기능에 접근할 수 있습니다.');}
+//else : 앞 조건에 따른 나머지 결과 도출
+else if(role == 'editor'){console.log('콘텐츠 수정 및 생성 기능에 접근할 수 있습니다.');}
+else if(role == 'viewer'){console.log('콘텐츠 조회만 가능합니다.');}
+else{console.log('정의되지 않은 역할입니다.');}
 
 /*
 문제 8: 나이에 따른 놀이공원 입장료 계산
@@ -105,7 +130,12 @@ viewer: '콘텐츠 조회만 가능합니다.'
 20세 이상 65세 미만: '10,000원'
 65세 이상: '3,000원'
 */
-
+//조건 age < 8 && age >= 8, age <= 19 && age >= 20 , age < 65 && age >= 65
+let age = Number(prompt('나이를 입력하세요'))
+if( age < 8 ){console.log('무료');}
+else if(age >= 8 && age <= 19){console.log('5,000원');}
+else if(age >= 20 && age < 65){console.log('10,000원');}
+else{console.log('3,000원');}
 /*
 문제 9: 성적 등급 계산
 하나의 점수를 입력받아 다음 조건에 따라 등급을 출력하는 프로그램을 작성하시오.
@@ -114,6 +144,12 @@ viewer: '콘텐츠 조회만 가능합니다.'
 70점 이상 80점 미만: 'C등급'
 70점 미만: '재시험'
 */
+// 조건 point >= 90 && point >= 80 , point < 90 && point >== 70, point < 80 && point < 70
+let point = Number(prompt('점수'))
+if(point >= 90){console.log('A등급');}
+else if(point >= 80){console.log('B등급');}
+else if(point >= 70){console.log('C등급');}
+else{ console.log('재시험');}
 
 /*
 문제 10: 음료 자판기
@@ -122,3 +158,13 @@ viewer: '콘텐츠 조회만 가능합니다.'
 음료 가격 목록 : let drinkPrices = [1000, 1000, 1500];
 사용자로부터 원하는 음료(0, 1, 2)의 번호를 입력받아, 해당하는 음료 이름과 가격을 '선택하신 음료는 [음료이름]입니다. 가격은 [가격]원입니다.' 형식으로 출력하세요. 만약 목록에 없는 번호를 입력하면 '없는 상품입니다.'라고 출력하는 프로그램을 작성하시오.
 */
+let drinkNames = ['콜라', '사이다', '커피'];
+let drinkPrices = [1000, 1000, 1500];           //*음료의 번호 == 인덱스 번호
+//조건 : (없는 번호) 0~2사이(범위논리), num >=0 && num <=2
+let num = Number(prompt('음료번호(0~2) :'))
+if( num >= 0 && num <= 2){
+    console.log(`선택하신 음료는 ${ drinkNames[num]}입니다. 가격은 ${ drinkPrices[num]} 원입니다.`);
+}
+else{ 
+    console.log('없는 상품입니다.')
+}
