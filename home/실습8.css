@@ -1,0 +1,97 @@
+/*===================공통 CSS ========================*/
+*{margin: 0px ; padding: 0px;
+box-sizing: border-box;}
+a{text-decoration: none; color:black;}
+li{list-style: none;}
+
+#header{
+    width: 1280px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px auto;
+}
+#home > h1> span{color: #0000ff;}
+#top_manu::{display: flex;}
+#top_menu > li {margin-left: 30px;}
+#top_menu a {color: black;}
+
+#main_img{
+   display: block;
+   margin: 0px auto;
+}
+
+#appointment_gallery{
+    display: flex;
+    justify-content: space-around;
+    width: 1280px;
+    margin: 60px auto;
+}
+
+#appointment_gallery >div {
+    display: flex;
+    width: 615px;
+}
+#appointment_gallery >div >div {
+    padding-left: 30px;
+}
+#appointment_gallery p {
+    font-size: 18px;
+}
+
+#studio_info_back{
+    background-color: #eeeeee;
+}
+
+#studio_info{
+    width: 1280px;
+    margin: 10px auto;
+    padding: 60px 0px 40px 0px;
+    display: flex;
+    justify-content: space-between;
+
+}
+#studio_info img{
+    width: 300px;
+}
+
+#footer_back{
+    background-color: #292c32;
+}
+#footer{
+    width: 1280px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding: 60px 0px;
+}
+.CS_call> p{
+    font-weight: bold;
+    font-size: 20px;
+}
+.Ca_call >h3{
+     font-size: 35px;
+}
+
+.middle{
+    width: 340px;
+}
+
+.site_info >ul {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+}
+
+.site_info a{
+    color: white;
+}
+
+.icon{
+    display: flex;
+    justify-content: space-between;
+}
+.icon li{
+    padding: 5px;
+}
