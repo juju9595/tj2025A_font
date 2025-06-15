@@ -64,6 +64,11 @@ console.log(`결과:${result}`);
 80점 이상 90점 미만: 'B'
 70점 미만: 'C'
 */
+let 점수 = Number(prompt("학점을 입력하세요"))
+let 등급 = 점수 >= 90 ? "A" :
+            점수 >= 80? "B" :
+            "C";
+document.write(`<h2>학점은${등급}입니다</h2>`) ;
 
 
 
@@ -115,3 +120,7 @@ console.log(todoList); // 배열 전체 요소 출력
 let 대기자 = confirm("마지막 대기자")
 let waitingList = 
 */
+let waitingList = ['김민준', '이서연', '박도윤', '최지우'];
+let lastIndex = waitingList.length -1;
+let lastParson = waitingList[lastIndex];
+console.log(`마지막 대기자는 ${lastParson} 입니다`)
