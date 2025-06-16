@@ -1,0 +1,148 @@
+*{
+    margin: 0px; padding: 0px;
+    box-sizing: border-box;
+}
+
+li{list-style-type: none;}
+a{
+    text-decoration: none;
+    color: #737373;
+}
+#wrap {
+  margin: 0px auto;
+  width: 900px;
+}
+#main{
+    display: flex;
+    justify-content: space-between;
+    margin: 200px auto;
+}
+
+#mainImg{ width: 585px;}
+#mainImg>img{ width: 550px;}
+
+#main_right{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.img_container{
+    width: 177px;
+    height: 56px;
+    background-image: url("img2/insta_logo.png");
+    background-position: 2px -49px;
+    margin-bottom: 20px;
+}
+.inputId, .inputPwd {
+    width: 270px;
+    height: 56px;
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 3px;
+    margin-top: 5px;
+    background-color: rgb(250, 250, 250);
+    align-items: center;
+    padding: 0px 10px;
+}
+
+.inputBtn {
+    background-color: #808dfb;
+    width: 270px;
+    height: 32px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px 0px;
+    color: white;
+    font-weight: bold;
+}
+
+.line{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 270px;
+    padding: 15px 0px;
+}
+
+.line>div{
+    background-color: rgb(219, 219, 219);
+    width: 105px;
+    height: 1px;
+}
+.line>span {
+    color: rgb(115, 115, 115);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.facebook{
+    width: 270px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.facebook_logo{
+   background-image: url("img2/facebook_logo.png");
+   background-position: center;
+   background-size: contain;
+   width: 35px;
+   height: 35px; 
+}
+.facebook>div:nth-child(2){
+    color: #0095f6;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.password{
+    margin: 10px 0px 50px 0px;
+}
+.password >a{
+    font-size: 14px;
+    color: rgb(65, 80, 247);
+}
+
+.new{
+    font-size: 14px;
+}
+
+.new>span{
+    font-weight: bold;
+    color: rgb(65, 80, 247);
+}
+
+#footer_area{
+    bottom: 11px;
+    padding-bottom: 50px;
+}
+#footer{
+    margin: auto auto;
+}
+
+#footer>ul{
+    display: flex;
+    justify-content: space-between
+}
+
+#footer>ul>li {
+    color: #737373;
+    font-size: 11px;
+    margin: 0px 7px 11px 7px;
+}
+
+#footer>div{
+    display: flex;
+    justify-content: center;
+}
+.language{
+    color: #737373;
+    border none;
+    font-size: 11px;
+}
+
+#footer>div> span{
+    color: #737373;
+    font-size: 11px;
+}
+

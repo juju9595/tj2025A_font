@@ -39,6 +39,7 @@ for 중첩 반복문을 사용하여 아래와 같은 모양의 별을 출력하
 line 1부터 5까지 1씩 증가           -> for(let line = 1; line <=5; line++)
 star 1부터 (5/4/3/2/1)까지 1씩 증가 -> for(let line = 1; star <= 5-line+1; star++)
 =========================================================================================
+*/
 //(1) 단* 마다 곱* 출력 / 곱* 마다 단* 출력 //(2) 헹 마다 별 출력 / 별 마다 헹 출력
 let output="";
 for(let line=1; line<=5; line++){
@@ -50,7 +51,6 @@ for(let line=1; line<=5; line++){
     }
 }
 console.log(output);
-*/
 
 
 /*
@@ -77,6 +77,13 @@ for(let index =0; index <=userNames.length -1 ; index++){
 let seatLayout = [['A1', 'A2', 'A3'], ['B1', 'B2', 'B3'], ['C1', 'C2', 'C3']];
 */
 //배열 출력 X, 
+let seatLayout = [['A1', 'A2', 'A3'], ['B1', 'B2', 'B3'], ['C1', 'C2', 'C3']];
+for(let row = 0; row <=seatLayout.length -1; row++){
+    for(let col =0; col <=seatLayout[row].length -1; col++)
+        console.log(seatLayout[row][col]);
+    }
+
+
 
 
 
@@ -174,19 +181,19 @@ for 반복문을 사용하여 모든 영화를 순회합니다.
 let movieNames = ['히든페이스', '위키드', '글래디에이터2', '청설'];
 let movieRatings = [8, 4, 7, 6];
 
-let output=""
+let output1=""
 for(let index=0; index <= movieNames.length -1; index++){
     let name = movieNames[index];
-    output += `<div> ${name}`;
+    output1 += `<div> ${name}`;
     let score=movieRatings[index];
     let black = parseInt(score / 1);
     for( let circle =1 ; circle <= 10; circle++ ){
-        if(circle <= black){output += '<span>★</span>'}
-        else{output += '<spna>☆</span>'}
+        if(circle <= black){output1 += '<span>★</span>'}
+        else{output1 += '<spna>☆</span>'}
     }
-    output +='</div>'
+    output1 +='</div>'
 }
-document.write(output);
+document.write(output1);
 
 
 /*
