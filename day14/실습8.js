@@ -3,7 +3,7 @@
 문제 1: prompt로 제품 정보 객체 만들기
 prompt를 세 번 사용하여 사용자로부터 '제품명', '가격', '제조사'을 순서대로 입력받습니다. 
 입력받은 정보로 하나의 product 객체를 생성하고, 생성된 객체를 콘솔에 출력하시오.
-*/
+
 //1. prompt 이용하여 입력받은 데이터를 각각 변수에 저장
 let productName=prompt('제품명:')
 let price=prompt('가격:')
@@ -15,7 +15,9 @@ const obj1 ={'productName':productName, 'price' : price, 'company':company}
 //* 만일 속성명과 자료의 변수명이 일치하면 **속성명 생략**
 const obj2 ={productName, price, company};
 console.log(array); console.log(obj1); console.log(obj2);
+*/
 
+//============================================================================================
 /*
 문제 2: prompt로 회원 가입 및 아이디 중복 확인 기능 구현
 prompt를 세 번 사용하여 사용자로부터 '아이디', '비밀번호', '이름'을 순서대로 입력받습니다.
@@ -25,14 +27,41 @@ const members = [
   { id: 'user1', password: 'pass1', name: '사용자1' },
   { id: 'user2', password: 'pass2', name: '사용자2' },
 ];
-*/
+
+//1. promt를 세번 사용 :'아이디', '비밀번호', '이름'을 순서대로 입력받습니다.
 let id=prompt('아이디:')
 let pw=prompt('비밀번호:')
 let name=prompt('이름:')
-const member = {id, pw, name};
-for(let index=0; index <=obj3.length -1; index ==){
-    console.log()
+//2. 입력받은 정보(여러변수)로 하나의 member객체
+member.id = id;     // (2) 객체내 새로운 속성명에 입력받은 값 대입
+member.pwd = pwd;
+member.name = name; // vs let member = {id:id, pwd:pwd, name:name}
+//let member = []; member.push(id)
+  //*입력받은 아이디가 이미 배열에 존재여부
+  //1. 배열내 모든 객체 하나씩 (조회)꺼낸다.
+let idCheck=false; // 중복이 있다(true)/없다(false) 기억하기 위한 변수
+for(let index=0; index <=member.length -1; index ++){
+    let member=mbers[index]; // index번째의 member 객체 꺼내기(조회)
+    //2. 객체내 id 속성 값이 입력받은 값과 비교
+    if(member.id==id){ // index 번째의 member객체내 id속성값이 입력받은 id와 같은면
+      idCheck=true;//중복체크!!
+      break; // 반복문 종료
+
+    }
+    //*아직 모두 조회된 상태가 아니므로 for문 안에서 배열에 저장 하지 않는다.
+} //for end
+//3. member 객체, member배열에 저장
+//4. members 배열을 콘솔에 출력하시오.
+if(idCheck == false){
+  member.push(member);
+  console.log('등록성공');
 }
+else{
+  console.log('등록실패');
+}
+*/
+
+//====================================================================================================
 
 /*
 문제 3: 객체 배열의 속성 값 평균 구하기
@@ -42,21 +71,42 @@ const scores = [
   { name: 'B', math: 95, science: 88 },
   { name: 'C', math: 76, science: 78 }
 ];
-*/
 
+const scores = [ { name: 'A', math: 80, science: 92 },{ name: 'B', math: 95, science: 88 },{ name: 'C', math: 76, science: 78 }];
+let sum = 0;
+for(let index = 0; index <= scores.length -1; index ++){ // 0 부터 마지막 인덱스까지 1씩 증가
+  let 학생객체=scores[index]; //index번째 학생객체 호출
+  sum += 학생객체.math; // index번째 학생객체의 수학점수 속성값 호출
+}//for end
+console.log(sum / scores.length); // 합게 /3(배열길이=객체개수=인원수)
+*/
+//==================================================================================================
 
 /*
 문제 4: 특정 조건을 만족하는 객체 찾기
-products 배열에서 id가 3인 상품 객체를 찾아, 해당 객체 전체를 콘솔에 출력하시오. 일치하는 객체가 없으면 "상품을 찾을 수 없습니다."를 출력합니다.
+products 배열에서 id가 3인 상품 객체를 찾아, 해당 객체 전체를 콘솔에 출력하시오. 일치하는 객체가 없으면 
+"상품을 찾을 수 없습니다."를 출력합니다.
 const products = [
   { id: 1, name: '사과' },
   { id: 2, name: '바나나' },
   { id: 3, name: '포도' },
   { id: 4, name: '딸기' }
 ];
+
+const products = [ { id: 1, name: '사과' }, { id: 2, name: '바나나' }, { id: 3, name: '포도' }, { id: 4, name: '딸기' }];
+
+let idCheck = false; //id가 3인걸 찾았다(true)/못찾았다(false) 저장하는 변수
+for(let index=0; index <= products.length-1; index++){
+  let 과일객체 =  products[index] // index번째의 광ㄹ객체 꺼내기(호출 )
+  if(과일객체.id == 3){
+    let idCheck = true;// 찾았다. 목표 이뤘다. 굳이 뒤에 인덱스 확인해야할까?
+    console.log(과일객체);
+    break; // 반복문 종료
+  } //*모두 조회(for 모두 실행 후)를 하고 나서 찾았다/못찾았다 판단!!!
+} //for end
+if(idCheck == false){console.log("상품을 찾을 수 없습니다.");}
 */
-
-
+//====================================================================================================
 
 /*
 문제 5: 객체 배열 필터링하기
@@ -67,18 +117,36 @@ const users = [
   { id: 3, name: '유저3', isActive: true },
   { id: 4, name: '유저4', isActive: false }
 ];
+const users = [{ id: 1, name: '유저1', isActive: true },{ id: 2, name: '유저2', isActive: false },
+  { id: 3, name: '유저3', isActive: true },{ id: 4, name: '유저4', isActive: false }];
+const activeUsers = [] //새로운 배열 인 빈배열 선언
+for(let index=0; index <= users.length-1; index++){
+if(users[index]. isActive == true ) { activeUsers.push(users[index]);}
+}
+console.log(activeUsers);
 */
 
 
 
 /*
 문제 6: 객체 배열 데이터 변환하기
-movies 배열에 있는 각 영화 객체에서 title 속성만 추출하여, 영화 제목들로만 이루어진 새로운 배열 movieTitles를 만들고 콘솔에 출력하시오.
+movies 배열에 있는 각 영화 객체에서 title 속성만 추출하여, 영화 제목들로만 이루어진 새로운 배열 movieTitles를 
+만들고 콘솔에 출력하시오.
 const movies = [
   { title: '인셉션', director: '크리스토퍼 놀란' },
   { title: '기생충', director: '봉준호' },
   { title: '매트릭스', director: '워쇼스키 자매' }
 ];
+const movies = [
+  { title: '인셉션', director: '크리스토퍼 놀란' },
+  { title: '기생충', director: '봉준호' },
+  { title: '매트릭스', director: '워쇼스키 자매' }
+];
+const movieTitles = []
+for(let index=0; index <= movies.length-1; index++){
+  movieTitles.push(movies[index].title);
+}
+console.log(movieTitles);
 */
 
 
@@ -98,7 +166,26 @@ const team = [
 //   '개발팀': ['철수', '민수'],
 //   '기획팀': ['영희', '지혜']
 // }
+*/
+const team = [{ name: '철수', department: '개발팀' },{ name: '영희', department: '기획팀' }, { name: '민수', department: '개발팀' },{ name: '지혜', department: '기획팀' }];
+// 최종 결과 형태 (result)
+// {'개발팀': ['철수', '민수'], '기획팀': ['영희', '지혜']}
 
+//(방법1)
+let result = {'개발팀': [], '기획팀' : [] }; //빈 배열(부서) 2개를 갖는 객체 생성
+for(let index=0; index <= team.length -1; index++){
+  let t = team[index];//index 번째 객체 호출
+  if(t.department =='개발팀'){ // index 번째 객체의 부서가 '개발팀'
+    result.개발팀.push(t.name); // 결과객체내 개발팀 배열 에 index번째 객체의 이름 저장
+  }else if (t. department== '기획팀'){
+    result.기획팀.push(t.name);
+  }
+}//for end
+console.log(result);
+
+
+
+/*
 문제 8: 장바구니 총액 계산하기
 고객의 장바구니 정보를 담은 cart 배열과 상품 정보를 담은 productsInfo 배열이 있습니다.
 cart 배열: 각 요소는 고객이 담은 상품의 id와 quantity(수량)를 가집니다.
@@ -111,6 +198,12 @@ const productsInfo = [
   { id: 3, price: 2500 }
 ];
 */
+const cart = [{ id: 1, quantity: 2 },{ id: 3, quantity: 1 }];
+const productsInfo = [
+  { id: 1, price: 1000 },
+  { id: 2, price: 5000 }, // 장바구니에 없는 상품
+  { id: 3, price: 2500 }
+];
 
 
 /*
@@ -140,7 +233,7 @@ const webtoons = [
    나 혼자만 레벨업 ★★★★★★★★★☆
    유미의 세포들 ★★★★★★★★★☆
    전지적 독자 시점 ★★★★★★★★★☆
-*/
+
 const webtoons = [
   { title: '나 혼자만 레벨업', rating: 9.8 },
   { title: '유미의 세포들', rating: 9.9 },
@@ -153,7 +246,7 @@ for(let index=0; index<=webtoons.length-1; index++){
 
 
 }
-
+*/
 
 /*
 문제11 : 공공데이터 포털 : 인천 부평구 맛집 현황 테이블 만들기
