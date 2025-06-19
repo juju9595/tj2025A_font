@@ -158,8 +158,8 @@ let html =`<table>
     //테이블 내용물
     html+=`<tr>
             <td>${obj.동별}</td> <td>${obj.세대수}</td>
-            <td>${obj["인구수(계)"]}</th> 
-            <td>${obj["인구수(남)"]}</th> <td>${obj["인구수(여)"]}</th> 
+            <td>${obj["인구수(계)"]}</td> 
+            <td>${obj["인구수(남)"]}</td> <td>${obj["인구수(여)"]}</td> 
         </tr>`
 
  } //for end

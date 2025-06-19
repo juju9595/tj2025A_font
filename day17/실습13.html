@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    
+</head>
+<body>
+
+    <h1> 실습 13 미니 전화번호부 </h1>
+
+    <div>
+        <h3>등록영역</h3>
+        이름입력 : <input id="nameInput" type="text"/><br/>
+        전화번호 입력 : <input id="numberInput" type="text"/><br/>
+        메모입력 : <input id="memoInput" type="text"/><br/>
+        <button onclick="등록함수()"> 등록버튼 </button>
+    </div>
+
+    <div>
+        <h3>목록영역</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>이름</th> <th>전화번호 </th> <th>메모</th>
+                </tr>
+            </thead>
+            <tbody id="contentBody">
+                <tr><th> 홍길동 </th> <th> 010-1234-5678 </th> <th> OO회사 부장 </th></tr>
+                <tr><th> 신동엽 </th> <th> 010-8765-4321 </th> <th> 동료 </th></tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <script src='실습13.js'></script>
+
+</body>
+</html>
