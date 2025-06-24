@@ -72,7 +72,7 @@ function addWaiting() {console.log('--> addWaiting exe');
 
     let jsonData = JSON.stringify(waitingList);
     localStorage.setItem('waitingList', jsonData);
-}
+} //func end
 
 // ========================= (2) 대기확인 함수 ========================= //
 function checkStatus() { console.log('--> checkStatus exe');
@@ -99,4 +99,5 @@ function checkStatus() { console.log('--> checkStatus exe');
   }
   // 4. 찾지 못했을 경우
   alert('대기 정보가 없습니다.');
-}
+} //func end
+
