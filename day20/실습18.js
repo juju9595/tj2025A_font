@@ -40,6 +40,7 @@ function productAdd(){ console.log( '--> productAdd exe' );
         return; // 반환값 없는 함수종료 : 아래코드는 실행되지 않는다.
     }
 
+//====================================================================================
     let currentPno = 1;
         // ============sessionStorage 에서 memberList 가져오기 ====================//
         // (1) sessionStorage 에서 memberList 가져오기
@@ -72,6 +73,7 @@ function productAdd(){ console.log( '--> productAdd exe' );
     ptextInput.value = '';
     alert('[성공] 제품 등록 ');
 
+//=================================================================================
     let jsonData = JSON.stringify(productList);
         // (2) sessionStorage 에 memberList 속성명 배열저장하기.
          localStorage.setItem('productList', jsonData);
@@ -80,13 +82,14 @@ function productAdd(){ console.log( '--> productAdd exe' );
 }//f end
 
 
-
 // 출력함수.
 ViewAllProduct(); console.log(ViewAllProduct);
 function ViewAllProduct() {
     console.log(ViewAllProduct);
     // (1) 어디에
     const tbody = document.querySelector('#main > table > tbody');
+
+
         // ============sessionStorage 에서 memberList 가져오기 ====================//
         // (1) sessionStorage 에서 memberList 가져오기
         let productList =  localStorage.getItem('productList'); //.getItem('속성명/key')
@@ -99,6 +102,7 @@ function ViewAllProduct() {
         
         }
     
+
     // (2) 무엇을
     let html = '';
     for (let i = 0; i <= productList.length -1; i++) {
@@ -120,6 +124,9 @@ function ViewAllProduct() {
 // 실행조건 : [삭제버튼] onclick 했을때
 function deleteList(pno){
     console.log(`>> delete exe`);   console.log(pno);
+
+
+
         // ============sessionStorage 에서 memberList 가져오기 ====================//
         // (1) sessionStorage 에서 memberList 가져오기
         let productList =  localStorage.getItem('productList'); //.getItem('속성명/key')
@@ -137,6 +144,8 @@ function deleteList(pno){
             productList.splice(index, 1) // 해당 index 해서 요소 1개 삭제
             alert('[성공] 제품삭제'); //안내
 
+
+            
         let jsonData = JSON.stringify(productList);
         // (2) sessionStorage 에 memberList 속성명 배열저장하기.
          localStorage.setItem('productList', jsonData);
@@ -153,7 +162,7 @@ function deleteList(pno){
 
 
 
-//=======================================================================
+//-------------------------------2번째-------------------------------------------------
 let curretLno = 2;
 //console.log(inventoryLogs);
 
@@ -162,7 +171,7 @@ function Add(){
 
     // localStorage에서 productList 먼저 불러오기
     let productList = JSON.parse(localStorage.getItem('productList') || '[]');
-    
+
     //(1) 입력 마크업객체 가져오기
     const pnoInput = document.querySelector('#pnoInput');
     const categoryInput = document.querySelector('#categoryInput');
