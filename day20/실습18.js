@@ -137,7 +137,7 @@ function deleteList(pno){
             productList.splice(index, 1) // 해당 index 해서 요소 1개 삭제
             alert('[성공] 제품삭제'); //안내
 
-                let jsonData = JSON.stringify(productList);
+        let jsonData = JSON.stringify(productList);
         // (2) sessionStorage 에 memberList 속성명 배열저장하기.
          localStorage.setItem('productList', jsonData);
 
@@ -154,11 +154,15 @@ function deleteList(pno){
 
 
 //=======================================================================
-let curretlno = 2;
-console.log(inventoryLogs);
+let curretLno = 2;
+//console.log(inventoryLogs);
 
 function Add(){
     console.log('Add');
+
+    // localStorage에서 productList 먼저 불러오기
+    let productList = JSON.parse(localStorage.getItem('productList') || '[]');
+    
     //(1) 입력 마크업객체 가져오기
     const pnoInput = document.querySelector('#pnoInput');
     const categoryInput = document.querySelector('#categoryInput');
@@ -178,6 +182,7 @@ function Add(){
         return
     }
 
+
     const category = categoryInput.value; console.log(category);
     const mprice = mpriceInput.value; console.log(mprice);
     const mtext = mtextInput.value; console.log(mtext);
@@ -194,7 +199,7 @@ function Add(){
         return;
     }
 
-    let curretlno = 1;
+    let currentPno = 1;
         // ============sessionStorage 에서 memberList 가져오기 ====================//
         // (1) sessionStorage 에서 memberList 가져오기
         let inventoryLogs =  localStorage.getItem('inventoryLogs'); //.getItem('속성명/key')
@@ -203,13 +208,14 @@ function Add(){
             inventoryLogs = []; // 새로운 배열 생성
             //no(회원번호) 1 사용한다.
         }else{ // 존재하면 JSON(배열타입)으로 변환하기
-            productList = JSON.parse(inventoryLogs);
-            curretlno = inventoryLogs[inventoryLogs.length-1].lno +1;  //배열내 마지막인덱스의 회원번호 +1 
+            inventoryLogs = JSON.parse(inventoryLogs);
+            currentPno = inventoryLogs[inventoryLogs.length-1].pno +1;  //배열내 마지막인덱스의 회원번호 +1 
         }
+        
 
 
     const obj = {
-    lno: curretlno,
+    lno: curretLno,
     pno: pno,
     lstate: category, 
     lcount: mprice,
@@ -240,6 +246,17 @@ function AddPrint(){
     console.log('--> AddPrint exe' );
     //(1) 어디에  , <tbody>
     const tbody = document.querySelector('#main2 > table > tbody'); console.log(tbody);
+
+    let inventoryLogs =  localStorage.getItem('inventoryLogs'); //.getItem('속성명/key')
+        // (2) 존재하지 않으면 (배열) 새로 생성, 존재하면 타입변환
+        if(inventoryLogs == null){ // 해당 속성명(memberList)이 존재 하지 않으면
+            inventoryLogs = []; // 새로운 배열 생성
+            //no(회원번호) 1 사용한다.
+        }else{ // 존재하면 JSON(배열타입)으로 변환하기
+            inventoryLogs = JSON.parse(inventoryLogs);
+        
+        }
+
     //(2) 무엇을
     let html=``;
     for(let index = 0 ; index <= inventoryLogs.length - 1 ; index++ ){
@@ -262,12 +279,30 @@ function AddPrint(){
 // 제품 내역 수정
 function btnEdit(lno){
     console.log('btnEdit')
+
+    let inventoryLogs =  localStorage.getItem('inventoryLogs'); //.getItem('속성명/key')
+        // (2) 존재하지 않으면 (배열) 새로 생성, 존재하면 타입변환
+        if(inventoryLogs == null){ // 해당 속성명(memberList)이 존재 하지 않으면
+            inventoryLogs = []; // 새로운 배열 생성
+            //no(회원번호) 1 사용한다.
+        }else{ // 존재하면 JSON(배열타입)으로 변환하기
+           inventoryLogs = JSON.parse(inventoryLogs);
+        
+        }
+
+
     // 수정 번호의 객체 찾기
     for( let i = 0 ; i <= inventoryLogs.length -1; i++){
         if( inventoryLogs[i].lno == lno){
             const mtext = prompt("입출사유 : ");
             inventoryLogs[i].lcontent = mtext;
             alert('[성공] 입출사유 변경되었습니다.');
+
+
+        let jsonData = JSON.stringify(inventoryLogs);
+        // (2) sessionStorage 에 memberList 속성명 배열저장하기.
+         localStorage.setItem('inventoryLogs', jsonData);
+            
             AddPrint();
             return;
         } // if end
